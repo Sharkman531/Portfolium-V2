@@ -2,7 +2,7 @@ import { MongoClient, ObjectId } from "mongodb"
 import bcrypt from "bcrypt"
 import { crearToken } from "./token.service.js"
 
-const client = new MongoClient("mongodb+srv://admin:admin@dwt4av-hibridas-cluster.z4azp.mongodb.net/")
+const client = new MongoClient(MONGO_URI)
 
 const db = client.db("Portfolium")
 const usuarios = db.collection("Users") 
